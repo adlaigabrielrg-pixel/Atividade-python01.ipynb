@@ -1,0 +1,82 @@
+#%% md
+# Seu Primeiro Programa Interativo
+#%% md
+
+#%%
+def main():
+  num01 = 2
+  num02 = 7
+  soma = num01 + num02
+
+  return soma
+
+  resultado = main()
+  print(f"O resultado da soma e:{resultado}")
+
+
+
+
+#%% md
+# Media de 4 Notas
+#%%
+# calcula media
+def main():
+    num01 = 8
+    num02= 9
+    num03 = 10
+    num04 = 5
+    soma = (num01 + num02+ num03 + num04)
+    midia = soma /4
+
+    return midia
+
+main()
+
+
+
+#%%
+#Aluno:Adlai Gabriel
+#1. Preços fixos dos itens do cardápio (atribuição de variáveis)
+preco_prato_principal = 45.00
+preco_bebida = 8.50
+preco_sobremesa = 15.00
+
+# 2. Perguntar ao cliente a quantidade de cada item
+print("--- CARDÁPIO ---")
+print(f"1. Prato Principal: R$ {preco_prato_principal:.2f}")
+print(f"2. Bebida: R$ {preco_bebida:.2f}")
+print(f"3. Sobremesa: R$ {preco_sobremesa:.2f}\n")
+
+qtd_prato = int(input("Quantidade de Pratos Principais: "))
+qtd_bebida = int(input("Quantidade de Bebidas: "))
+qtd_sobremesa = int(input("Quantidade de Sobremesas: "))
+
+# 3. Calcular o subtotal de cada item e o total parcial
+subtotal_prato = qtd_prato * preco_prato_principal
+subtotal_bebida = qtd_bebida * preco_bebida
+subtotal_sobremesa = qtd_sobremesa * preco_sobremesa
+
+subtotal_geral = subtotal_prato + subtotal_bebida + subtotal_sobremesa
+
+# 4. Aplicar 10% de taxa de serviço
+taxa_servico = subtotal_geral * 0.10
+total_com_taxa = subtotal_geral + taxa_servico
+
+# 5. Perguntar em quantas pessoas dividir a conta
+num_pessoas = int(input("\nEm quantas pessoas deseja dividir a conta? "))
+valor_por_pessoa = total_com_taxa / num_pessoas
+
+# 6. Exibir tudo formatado com 2 casas decimais
+print("\n" + "="*30)
+print("       RESUMO DA CONTA       ")
+print("="*30)
+print(f"Subtotal Pratos:     R$ {subtotal_prato:7.2f}")
+print(f"Subtotal Bebidas:    R$ {subtotal_bebida:7.2f}")
+print(f"Subtotal Sobremesas: R$ {subtotal_sobremesa:7.2f}")
+print("-" * 30)
+print(f"Subtotal Geral:      R$ {subtotal_geral:7.2f}")
+print(f"Taxa de Serviço 10%: R$ {taxa_servico:7.2f}")
+print(f"TOTAL FINAL:         R$ {total_com_taxa:7.2f}")
+print("-" * 30)
+print(f"Valor por pessoa ({num_pessoas}): R$ {valor_por_pessoa:7.2f}")
+print("="*30)
